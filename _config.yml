@@ -7,13 +7,13 @@ title: Hexo
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: Yui_HTT
+language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://github.com/XuZhuohao
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -43,13 +43,20 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+#highlight:
+#  enable: true
+#  line_number: true
+#  auto_detect: false
+#  tab_replace: ''
+#  wrap: true
+#  hljs: false
+
+# markdown-it
 highlight:
-  enable: true
-  line_number: true
+  enable: false
+  line_number: false
   auto_detect: false
   tab_replace: ''
-  wrap: true
-  hljs: false
 prismjs:
   enable: false
   preprocess: true
@@ -103,9 +110,9 @@ theme: yilia
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
-  
-  
-
+ 
+ 
+##### add
 # yilia
 jsonContent:
     meta: false

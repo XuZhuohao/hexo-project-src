@@ -6,7 +6,7 @@ menu:
 
 # SubNav
 subnav:
-  github: "#"
+  github: "https://github.com/XuZhuohao"
   weibo: "#"
   rss: "#"
   zhihu: "#"
@@ -68,7 +68,7 @@ google_analytics: ''
 favicon: /favicon.png
 
 #你的头像url
-avatar:
+avatar: https://avatars.githubusercontent.com/u/23691075?s=400&u=16406ea8b250d4de8df7c44e243fdb7d544fc507&v=4
 
 #是否开启分享
 share_jia: true
