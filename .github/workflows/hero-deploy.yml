@@ -1,0 +1,58 @@
+
+
+name: hero-deploy
+
+on:
+  push:
+    branches: [ master ]
+    
+
+    
+jobs:
+  
+  deploy:
+    name: deploy hero project
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout code
+        uses: actions/checkout@master
+        
+      - name: install node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      
+      - name: cache node modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      
+      - name: install hero
+        run: |
+          npm install hexo-cli gulp -gul
+          npm install
+          
+      - name: generate file
+        run: |
+          hero clean
+          hero generate
+       
+      - name: Execute gulp task
+        run: gulp   
+        
+      - name: deploy hexo
+        env: 
+          # Github 仓库
+          GITHUB_REPO: https://github.com/XuZhuohao/xuzhuohao.github.io
+        # 推送
+        run: |
+          cd ./public && git init && git add
+          git config user.name "yui_htt"
+          git config user.email "786725551@qq.com"
+          git add *
+          git commit -m "GitHub Actions Auto Builder at $(date +'%Y-%m-%d %H:%M:%S')"
+          git push --force --quiet "https://${{ secrets.ACCESS_TOKEN }}@$GITHUB_REPO" master:master
+          
+      
