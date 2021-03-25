@@ -31,13 +31,13 @@ jobs:
       
       - name: install hero
         run: |
-          npm install hexo-cli -g
+          npm install hexo-cli gulp -g
           npm install
           
       - name: generate file
         run: |
-          hero clean
-          hero generate
+          hexo clean
+          hexo generate
        
       - name: Execute gulp task
         run: gulp   
