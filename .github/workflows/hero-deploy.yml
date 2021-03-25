@@ -31,7 +31,7 @@ jobs:
       
       - name: install hero
         run: |
-          npm install hexo-cli gulp -g
+          npm install hexo-cli -g
           npm install
           
       - name: generate file
