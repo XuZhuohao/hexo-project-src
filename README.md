@@ -37,4 +37,48 @@
 >
 > $ hexo g # 重新生产，如果有异常，可以用 hexo clean 清理
 
-- 
+- 数学引擎1：
+
+  - 修改markdown渲染引擎
+
+  > npm uninstall hexo-renderer-marked --save
+  > npm install hexo-renderer-kramed --save
+  - 修改渲染引擎模块
+
+  ```js
+    // node_modules\kramed\lib\rules\inline.js 
+    //第11行的escape变量的值修改为如下：
+    //escape: /^\\([\\`*{}\[\]()#$+\-.!_>])/,
+    escape: /^\\([`*\[\]()#$+\-.!_>])/,
+        
+    // 第20行的em变量也要做相应的修改:
+    //em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+    em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+  ```
+
+  - 主题目录下_config.yml添加如下配置:
+
+  ```yaml
+  # MathJax Support
+  mathjax:
+    enable: true
+    per_page: true
+  ```
+
+  - 在需要的文章下面添加开关：
+
+  ```markdown
+  ---
+  title: index.html
+  date: 2016-12-28 21:01:30
+  tags:
+  mathjax: true
+  --
+  ```
+
+- 数学引擎2：
+
+  - 添加插件：
+
+  > npm install hexo-math --save
+

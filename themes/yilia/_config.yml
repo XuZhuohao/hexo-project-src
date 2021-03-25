@@ -38,7 +38,7 @@ excerpt_link: 'more'
 # 文章卡片右下角常驻链接，不需要请设置为false
 show_all_link: '展开全文'
 # 数学公式
-mathjax: false
+#mathjax: false
 # 是否在新窗口打开链接
 open_in_new: false
 
@@ -129,3 +129,14 @@ friends:
   友情链接6: http://localhost:4000/
 
 aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
+
+# MathJax Support
+math:
+  enable: true
+  engine: mathjax
+  per_page: true
+#
+mathjax:
+  enable: true
+  cdn: //cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  per_page: true
