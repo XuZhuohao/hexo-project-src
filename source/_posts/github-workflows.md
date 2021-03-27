@@ -1,7 +1,7 @@
 ---
 title: github workflows
 categories: other
-date: 2021年3月27日15:39:27
+date: 2021-03-27 15:39:27
 tags:
 mathjax: false
 ---
