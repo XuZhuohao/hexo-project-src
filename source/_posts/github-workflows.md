@@ -77,7 +77,7 @@ mathjax: false
 #### 1.2.1 说明
 
 1. [对应 github 仓库点击查看](https://github.com/XuZhuohao/hexo-project-src)
-2. 参考章节 1.1
+2. 参考章节 [1.1](### 1.1 创建 workflows 流程)
 3. `workflows` 运行于仓库 `hexo-project-src` ，运行产出物推送到仓库 `xuzhuohao.github.io`
 4. 流程场景说明：
    - 在使用 hero 根据 markdown 生成 blog 代码，并在 github 发布，作用域名访问时，常需要如下操作：
